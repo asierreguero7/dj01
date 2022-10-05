@@ -1,8 +1,6 @@
 from django.db import models
 
-# Create your models here.
-
-class Platera(models.Model):
-    izena = models.TextField()
-    prezioa = models.FloatField()
+class Platerak(models.Model):
+  izena = models.CharField(max_length=255)
+  prezioa = models.FloatField()
     

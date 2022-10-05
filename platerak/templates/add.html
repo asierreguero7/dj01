@@ -1,0 +1,14 @@
+<center>
+<h1 style="font-size: 100px">Platera sortu</h1>
+
+<form action="addrecord/" method="post" style="font-size: 30px">
+    {% csrf_token %}
+    <label for="izena">Izena:</label><br>
+    <input name="izena" required style="height: 40px; width: 150px; margin: 20px">
+    <br><br>
+    <label for="prezioa">Prezioa:</label><br>
+    <input name="prezioa" required style="height: 40px; width: 150px;  margin: 20px">
+    <br><br>
+    <input type="submit" value="Sortu" style="font-size: 30px">
+</form>
+</center>

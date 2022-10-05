@@ -1,0 +1,12 @@
+<h1>Platera aldatu</h1>
+
+<form action="updaterecord/{{ platera.id }}" method="post">
+{% csrf_token %}
+Izena:<br>
+<input name="izena" value="{{ platera.izena }}">
+<br><br>
+Prezioa:<br>
+<input name="prezioa" value="{{ platera.prezioa }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>

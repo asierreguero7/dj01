@@ -1,9 +1,29 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
-    <body>
+</script>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<body>
+<center>
+<h1 style="font-size: 100px">Platerak</h1>
 
-        <h1>Hello World!</h1>
-        <p>Welcome to my first Django project!</p>
 
-    </body>
+<table border="0" style="padding: 5px; font-size: 60px">
+    {% for x in platerak %}
+    <tr style="padding: 10px">
+        <td style="padding: 20px;">{{ x.izena }}</td>
+        <td style="padding: 20px;">{{ x.prezioa }}</td>
+        <td style="padding: 20px;"><a href="delete/{{ x.id }}"><div id="img" style="height: 65px; width: 50px"></div></a></td>
+        <td><a href="update/{{ x.id }}"><img src="{% static 'edit.png' %}" style="height: 65px; width: auto"></a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p style="font-size: 50px">
+    <a href="add/">Platera sortu</a>
+</p>
+</center>
+
+</body>
 </html>
