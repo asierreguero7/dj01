@@ -9,3 +9,14 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+body{
+    background: url("back.jpg");
+    background-repeat: no-repeat;
+    color: darkred;
+}
+
+h1{
+    color: crimson;
+    opacity: 80%;
+}

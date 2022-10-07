@@ -1,12 +1,17 @@
-<h1>Platera aldatu</h1>
+{% load static %}
 
-<form action="updaterecord/{{ platera.id }}" method="post">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<center>
+<h1 style="font-size: 80px">PLATERA ALDATU</h1>
+
+<form action="updaterecord/{{ platera.id }}" method="post" style="font-size: 30px">
 {% csrf_token %}
 Izena:<br>
-<input name="izena" value="{{ platera.izena }}">
+<input name="izena" value="{{ platera.izena }}" style="height: 40px; width: 150px; margin: 20px">
 <br><br>
 Prezioa:<br>
-<input name="prezioa" value="{{ platera.prezioa }}">
+<input name="prezioa" value="{{ platera.prezioa }}" style="height: 40px; width: 150px; margin: 20px">
 <br><br>
-<input type="submit" value="Submit">
+<input type="submit" value="ALDATU" style="font-size: 30px; color: darkred;">
 </form>
+</center>

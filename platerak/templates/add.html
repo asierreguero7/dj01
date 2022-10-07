@@ -1,5 +1,8 @@
+{% load static %}
+
 <center>
-<h1 style="font-size: 100px">Platera sortu</h1>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<h1 style="font-size: 80px">PLATERA SORTU</h1>
 
 <form action="addrecord/" method="post" style="font-size: 30px">
     {% csrf_token %}
@@ -9,6 +12,6 @@
     <label for="prezioa">Prezioa:</label><br>
     <input name="prezioa" required style="height: 40px; width: 150px;  margin: 20px">
     <br><br>
-    <input type="submit" value="Sortu" style="font-size: 30px">
+    <input type="submit" value="SORTU" style="font-size: 30px; color: darkred;">
 </form>
 </center>
