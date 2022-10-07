@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'platerak.apps.PlaterakConfig'
+    'platerak.apps.PlaterakConfig',
+    'bezeroak.apps.BezeroakConfig',
 ]
 
 MIDDLEWARE = [
