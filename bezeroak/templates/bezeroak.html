@@ -1,9 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <body>
 
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
+<center>
+<h1 style="font-size: 100px">BEZEROAK</h1>
+
+
+<table border="0" style="padding: 5px; font-size: 60px">
+    {% for x in bezeroak %}
+    <tr style="padding: 10px">
+        <td style="padding: 20px;">{{ x.izena }}</td>
+        <td style="padding: 20px;">{{ x.abizena }}</td>
+        {% for y in platerak %}
+            {% if x.platerGustokoena == y.id %}
+                <td  style="padding: 20px; font-size: 30px;">{{ y.izena }}</td>
+            {% endif %}
+        {% endfor %}
+        <td style="padding: 20px;"><a href="delete/{{ x.id }}"><div id="img" style="height: 65px; width: 50px"></div></a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</center>
 
 </body>
 </html>

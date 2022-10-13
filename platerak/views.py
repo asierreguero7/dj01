@@ -3,7 +3,7 @@ from django.template import loader
 from django.urls import reverse
 from .models import Platerak
 
-def index(request):
+def platerak(request):
   platerak = Platerak.objects.all().values()
   template = loader.get_template('platerak.html')
   context = {
@@ -20,12 +20,12 @@ def addrecord(request):
   y = request.POST['prezioa']
   platera = Platerak(izena=x, prezioa=y)
   platera.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('platerak'))
 
 def delete(request, id):
   platera = Platerak.objects.get(id=id)
   platera.delete()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('platerak'))
 
 def update(request, id):
   platera = Platerak.objects.get(id=id)
@@ -42,4 +42,4 @@ def updaterecord(request, id):
   platera.izena = izena
   platera.prezioa = prezioa
   platera.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('platerak'))

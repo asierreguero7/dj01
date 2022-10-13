@@ -1,0 +1,22 @@
+#img{
+    background :url("1017479.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#img:hover{
+    background :url("1017479red.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+body{
+    background: url("back.jpg");
+    background-repeat: no-repeat;
+    color: darkred;
+}
+
+h1{
+    color: crimson;
+    opacity: 80%;
+}

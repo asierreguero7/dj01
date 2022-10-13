@@ -17,6 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('izena', models.CharField(max_length=255)),
                 ('abizena', models.CharField(max_length=255)),
+                ('platerGustokoena', models.IntegerField()),
             ],
         ),
     ]
